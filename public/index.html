@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Morpher Example</title>
+    <meta name="viewport" content="widht=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="general.css">
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+</head>
+<body>
+    <div class="ui middle aligned center aligned grid js-required">
+        <div class="column">
+            <p>Для работы приложения требуется поддержка браузером JavaScript</p>
+        </div>
+    </div>
+    <div class="ui middle aligned center aligned page grid">
+        <div class="column">
+            <div class="ui top attached tabular menu">
+                <a class="active item" data-tab="first">Общее</a>
+                <a class="item" data-tab="second">Имена</a>
+                <a class="item" data-tab="third">Числа</a>
+            </div>
+            <div class="ui bottom attached active tab segment left aligned morpher" data-tab="first" data-uri="/declension" data-method="declension">
+                <div class="ui icon message">
+                    <i class="info icon"></i>
+                    <div class="content">
+                        <div class="header">Сколнение произвольных слов и словосочетаний</div>
+                        <p>Введите текст, который хотите просклонять, в поле ниже и нажмите Submit</p>
+                    </div>
+                </div>
+                <div class="ui fluid action input morpher-form">
+                    <input type="text" placeholder="Введите текст...">
+                    <button class="ui button">Submit</button>
+                </div>
+                <div class="ui inverted segment morpher-response term">
+                    > <i>&nbsp;</i>
+                </div>
+            </div>
+            <div class="ui bottom attached tab segment left aligned morpher" data-tab="second" data-uri="/declension/name" data-method="declensionName">
+                <div class="ui icon message">
+                    <i class="info icon"></i>
+                    <div class="content">
+                        <div class="header">Склонение имён</div>
+                        <p>Введите имя в поле ниже и нажмите Submit</p>
+                    </div>
+                </div>
+                <div class="ui fluid action input morpher-form">
+                    <input type="text" placeholder="Введите имя...">
+                    <button class="ui button">Submit</button>
+                </div>
+                <div class="ui inverted segment morpher-response term">
+                    > <i>&nbsp;</i>
+                </div>
+            </div>
+            <div class="ui bottom attached tab segment left aligned morpher" data-tab="third" data-uri="/declension/number", data-method="declensionNumber 2">
+                <div class="ui icon message">
+                    <i class="info icon"></i>
+                    <div class="content">
+                        <div class="header">Числа прописью</div>
+                        <p>Введите число и единицу измерения в поле ниже и нажмите Submit</p>
+                    </div>
+                </div>
+                <div class="ui fluid action input morpher-form">
+                    <input type="text" placeholder="Например, 38 попугай">
+                    <button class="ui button">Submit</button>
+                </div>
+                <div class="ui inverted segment morpher-response term">
+                    > <i>&nbsp;</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.js"></script>
+    <script src="client.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.tabular.menu .item').tab();
+            $('.morpher').morpher();
+        });
+    </script>
+</body>
+</html>

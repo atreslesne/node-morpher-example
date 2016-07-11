@@ -1,0 +1,20 @@
+{
+  "name": "morpher-ru-example",
+  "version": "0.1.0",
+  "author": "Atres Lesne <brain@atreslesne.com>",
+  "license": "MIT",
+  "description": "Пример использования библиотеки morpher-ru",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atreslesne/node-morpher-example"
+  },
+  "dependencies": {
+    "koa": "^1.2.0",
+    "koa-bodyparser": "^2.2.0",
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0",
+    "morpher-ru": "^0.1.1",
+    "nedb": "^1.8.0"
+  }
+}

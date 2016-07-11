@@ -1,0 +1,39 @@
+html, body {
+    padding: 0;
+}
+
+.js-required,
+body > .page.grid {
+    height: 100%;
+}
+.js-required .column {
+    max-width: 500px;
+}
+.js .js-required {
+    display: none !important;
+}
+
+body > .page.grid {
+    margin-top: 0 !important;
+}
+
+.ui.icon.message .content {
+    text-align: left;
+}
+
+.term {
+    font-family: monospace;
+    cursor: default;
+    height: 300px;
+}
+.term i {
+    font-style: normal;
+    animation: cursor 1s infinite;
+}
+@keyframes cursor {
+    0% { background-color: transparent; color: #fff; }
+    40% { background-color: transparent; color: #fff; }
+    50% { background-color: #fff; color: #000; }
+    90% { background-color: #fff; color: #000; }
+    100% { background-color: transparent; color: #fff; }
+}
